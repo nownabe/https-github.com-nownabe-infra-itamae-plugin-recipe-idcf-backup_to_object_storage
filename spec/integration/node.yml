@@ -1,0 +1,14 @@
+idcf:
+  backup_to_object_storage:
+    access_key: SPEC_ACCESS_KEY
+    secret_key: SPEC_SECRET_KEY
+    directories:
+      - schedule: 1 * * * *
+        path: PATH1
+        bucket: BUCKET1
+        expire: 7
+      - schedule: 1 * * * *
+        path: PATH2
+        bucket: BUCKET2
+        expire: 7
+        command: COMMAND
