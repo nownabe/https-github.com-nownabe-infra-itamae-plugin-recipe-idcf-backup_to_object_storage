@@ -1,4 +1,4 @@
 <%- node[:idcf][:backup_to_object_storage][:directories].each do |dir| %>
-<%= dir[:schedule] %> <%= dir[:user] || "root" %> /bin/bash /opt/idcf/backup_to_object_storage.sh <%= dir[:path] %> <%= dir[:bucket] %> <%= dir[:expire] %> <%= dir[:command] ? "'#{dir[:command]}'" : "" %>
+<%= dir[:schedule] %> root /bin/bash /opt/idcf/backup_to_object_storage.sh <%= dir[:path] %> <%= dir[:bucket] %> <%= dir[:expire] %> <%= dir[:command] ? "'#{dir[:command]}'" : "" %>
 <%- end %>
 
