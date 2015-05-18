@@ -3,7 +3,7 @@ require "spec_helper"
 describe file("/etc/cron.d/idcf-backup_to_object_storage") do
   it { should be_file }
   it { should contain "1 * * * * root /bin/bash /opt/idcf/backup_to_object_storage.sh PATH1 BUCKET1 7" }
-  it { should contain "1 * * * * root /bin/bash /opt/idcf/backup_to_object_storage.sh PATH2 BUCKET2 7 COMMAND" }
+  it { should contain "1 * * * * root /bin/bash /opt/idcf/backup_to_object_storage.sh PATH2 BUCKET2 7 'COMMAND'" }
 end
 
 describe file("/etc/s3cmd/idcf/backup_to_object_storage.cfg") do
