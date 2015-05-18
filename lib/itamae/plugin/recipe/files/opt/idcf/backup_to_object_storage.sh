@@ -22,4 +22,4 @@ s3cmd -c $config sync s3://$bucket/ $path
 find $path -type f -daystart -mtime +$expire | xargs rm -f
 
 : "Sync backups to object storage"
-secmd -c $config sync --delete-removed $path s3://$bucket/
+s3cmd -c $config sync --delete-removed $path s3://$bucket/
