@@ -11,4 +11,4 @@ idcf:
         path: PATH2
         bucket: BUCKET2
         expire: 7
-        command: COMMAND
+        command: tar zcf /backup/path2/backup_`date +\%Y\%m\%d\%H\%M`.tar.gz /backup/source

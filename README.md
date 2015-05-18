@@ -43,7 +43,7 @@ idcf:
         path: /backup/path2
         bucket: backup.bucket2
         expire: 30
-        command: tar zcf /backup/path2/backup_`date +%Y%m%d%H%M`.tar.gz /backup/source
+        command: tar zcf /backup/path2/backup_`date +\%Y\%m\%d\%H\%M`.tar.gz /backup/source
                  # This command is executed before backup to object storage
 ```
 
