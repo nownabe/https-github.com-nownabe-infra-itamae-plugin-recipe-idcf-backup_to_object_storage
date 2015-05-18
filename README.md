@@ -19,9 +19,15 @@ Or install it yourself as:
     $ gem install itamae-plugin-recipe-idcf-backup_to_object_storage
 
 ## Usage
+### Recipe
+In you recipe:
+
+```ruby
+include_recipe "idcf-backup_to_object_storage"
+```
 
 ### Configuration
-In you `node.yml` of `node.json`
+In you `node.yml` of `node.json`:
 
 ```yaml
 idcf:
