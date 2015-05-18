@@ -16,7 +16,7 @@ fi
 s3cmd -c $config mb s3://$bucket
 
 : "Sync backups from object storage"
-s3cmd -c $config sync s3://$bucket/ 
+s3cmd -c $config sync s3://$bucket/ $path
 
 : "Remove expired backups"
 find $path -type f -daystart -mtime +$expire | xargs rm -f
