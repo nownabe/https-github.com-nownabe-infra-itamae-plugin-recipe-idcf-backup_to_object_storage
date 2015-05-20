@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 
 path=$(echo $1 | sed -re 's#/?$#/#')

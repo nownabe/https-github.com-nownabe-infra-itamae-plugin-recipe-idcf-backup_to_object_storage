@@ -19,6 +19,8 @@ end
 
 describe file("/opt/idcf/backup_to_object_storage.sh") do
   it { should be_file }
+  it { should be_executable }
   it { should be_owned_by "root" }
   it { should be_grouped_into "root" }
+  its(:content) { should match %r(^#!/bin/bash)m }
 end
