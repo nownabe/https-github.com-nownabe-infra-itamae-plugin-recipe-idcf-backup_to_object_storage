@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nownabe@gmail.com"]
 
   spec.summary       = %q{An itamae plugin to backup directories to IDCF Object Storage}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/nownabe/itamae-plugin-recipe-idcf-backup_to_object_storage"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
